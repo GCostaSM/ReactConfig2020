@@ -1,4 +1,6 @@
 const path = require('path')
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   entry: './src/Index.tsx',
   output: {
@@ -15,9 +17,23 @@ module.exports = {
           use: 'ts-loader',
           exclude: '/node_modules/'
         },
+        {
+          test: /\.(jpg|jpeg|png|svg)$/,
+          use: {
+           loader: 'url-loader'
+          }
+        }
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js'],
-  }
+    extensions: ['.tsx', '.ts', '.jsx', '.js','.png'],
+  },
+  plugins: [
+      new CopyPlugin({
+        patterns: [
+          { from: 'src/assets', to: 'dist' },
+          { from: 'src/assets', to: 'build' },
+        ],
+      }),
+  ]
 }
