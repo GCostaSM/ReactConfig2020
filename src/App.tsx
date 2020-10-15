@@ -8,7 +8,7 @@ export const App = () => (
     <div className="link-container">
         <NavLink activeClassName="active" exact to="/">
           Main
-        </NavLink>
+        </NavLink><br/>
         <NavLink activeClassName="active" to="/tt">
           tt
         </NavLink>
