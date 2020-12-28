@@ -1,8 +1,12 @@
 const path = require('path')
 const CopyPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './src/Index.tsx',
+  entry: {
+    app: './src/Index.tsx',
+    vendor: ['react', 'react-dom', 'react-router-dom']
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js'
