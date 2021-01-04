@@ -12,7 +12,7 @@ import Comet3 from '../../assets/comet_3.svg';
 import Comet4 from '../../assets/comet_4.svg';
 import fb from '../../assets/icon_fb.svg';
 import twitter from '../../assets/icon_tw.svg';
-import  { P, A, UL, LI, Button, Input, TextArea, H1, Leading }  from './StyleDefault'
+import  { P, A, UL, LI, Button, Input, TextArea, H1, Leading, Grid3c }  from './StyleDefault'
 
 interface Props {
 }
@@ -56,7 +56,7 @@ const Default: React.FC<Props> = () => {
             </section>
             <Leading>
                 <h3>Some of my projects</h3>
-                <div>
+                <Grid3c>
                     <A href="#">
                         <img src={Project1}/>
                         <h4>Space Race Game</h4>
@@ -69,7 +69,7 @@ const Default: React.FC<Props> = () => {
                         <img src={Project3}/>
                         <h4>Captain Cosmo Blog</h4>
                     </A>
-                </div>
+                </Grid3c>
             </Leading>
             <section>
                 <h3>Things i can do</h3>

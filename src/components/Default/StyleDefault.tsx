@@ -44,10 +44,71 @@ export const Button = styled.button`
         background-color:${colorPrimary};
     }
 `
+/*
+    grid basics
+    columns and rows
+
+    grid container
+    <div>
+        <a>one</a>
+        <a>two</a>
+        <a>three</a>
+    </div>
+
+    div{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    12 column grid
+    selector{
+        display: grid;
+        grid-template-columns:repeat(12, 1fr);
+    }
+
+    .one{
+        grid-column: 1/5;
+    }
+
+    .two{
+        grid-column:6/9;
+    }
+
+    three{
+        grid-column: 10/12;
+        grid-row:2;
+    }
+*/ 
 
 export const Leading = styled.section`
     font-size:1.1em;
-        
+`
+
+export const Grid3c = styled.section`
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    a{
+        text-align:center;
+        padding:20px;
+    }
+    a:nth-child(1){
+        grid-column: 2/6;
+        grid-row:1;
+    }
+    a:nth-child(2){
+        grid-column: 8/12;
+        grid-row:1;
+    }
+    a:nth-child(3){
+        grid-column: 5/9;
+        grid-row:2;
+    }
+
+    img{
+        width:100%;
+    }
+    gap:10px;
 `
 
 export const Input = styled.input`
