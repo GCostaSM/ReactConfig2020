@@ -11,6 +11,7 @@ let colorPrimary = '#0A0B5B'
 const GlobalStyle = createGlobalStyle`
   body {
     background-color:${colorPrimary};
+    font-size:20px;
   }
 `
 
