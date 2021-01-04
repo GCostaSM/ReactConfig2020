@@ -12,7 +12,7 @@ import Comet3 from '../../assets/comet_3.svg';
 import Comet4 from '../../assets/comet_4.svg';
 import fb from '../../assets/icon_fb.svg';
 import twitter from '../../assets/icon_tw.svg';
-import  { P, A, UL, LI }  from './StyleDefault'
+import  { P, A, UL, LI, Button, Input, TextArea, H1, Leading }  from './StyleDefault'
 
 interface Props {
 }
@@ -37,7 +37,7 @@ const Default: React.FC<Props> = () => {
     return (
         <div>
             <nav>
-                <h1>Cosmo Junkie</h1>
+                <H1>Cosmo Junkie</H1>
                 <UL>
                     <LI>Portfolio</LI>
                     <LI>Skills</LI>
@@ -54,7 +54,7 @@ const Default: React.FC<Props> = () => {
                     <img src={Banner} alt=""/>
                 </div>
             </section>
-            <section>
+            <Leading>
                 <h3>Some of my projects</h3>
                 <div>
                     <A href="#">
@@ -70,7 +70,7 @@ const Default: React.FC<Props> = () => {
                         <h4>Captain Cosmo Blog</h4>
                     </A>
                 </div>
-            </section>
+            </Leading>
             <section>
                 <h3>Things i can do</h3>
                 <UL>
@@ -96,10 +96,10 @@ const Default: React.FC<Props> = () => {
                 <h3>Get in touch</h3>
                 <P> orem Ipsum is simply dummy text of the printing and</P>
                 <form>
-                    <input type="text" placeholder="NAME"/>
-                    <input type="email" placeholder="EMAIL"/>
-                    <textarea placeholder="YOUR MESSAGE"></textarea>
-                    <button>Send</button>
+                    <Input type="text" placeholder="NAME"/>
+                    <Input type="email" placeholder="EMAIL"/>
+                    <TextArea placeholder="YOUR MESSAGE"></TextArea>
+                    <Button>Send</Button>
                 </form>
             </section>
             <footer>
